@@ -399,16 +399,12 @@ const App = () => {
               className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full"
               onClick={() => paginate(-1)}
               aria-label="Previous project"
-            >
-              <FaChevronLeft className="w-6 h-6 text-gray-800" />
-            </button>
+            ></button>
             <button
               className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full"
               onClick={() => paginate(1)}
               aria-label="Next project"
-            >
-              <FaChevronRight className="w-6 h-6 text-gray-800" />
-            </button>
+            ></button>
 
             <div
               className="relative h-auto min-h-[500px] overflow-hidden rounded-xl"
