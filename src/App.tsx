@@ -86,16 +86,6 @@ const App = () => {
     emailjs.init(EMAILJS_CONFIG.publicKey);
   }, []);
 
-  const paginate = (newDirection: number) => {
-    setDirection(newDirection);
-    setCurrentProject((prev) => {
-      const nextProject = prev + newDirection;
-      if (nextProject < 0) return projects.length - 1;
-      if (nextProject >= projects.length) return 0;
-      return nextProject;
-    });
-  };
-
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
