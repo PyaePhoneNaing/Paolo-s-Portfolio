@@ -2,12 +2,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
   FaFacebook,
   FaInstagram,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 // EmailJS Configuration
@@ -394,6 +394,22 @@ const App = () => {
         <div className="container">
           <h2 className="heading text-dark text-center">Projects</h2>
           <div className="relative max-w-3xl mx-auto">
+            {/* Add navigation buttons */}
+            <button
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full"
+              onClick={() => paginate(-1)}
+              aria-label="Previous project"
+            >
+              <FaChevronLeft className="w-6 h-6 text-gray-800" />
+            </button>
+            <button
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full"
+              onClick={() => paginate(1)}
+              aria-label="Next project"
+            >
+              <FaChevronRight className="w-6 h-6 text-gray-800" />
+            </button>
+
             <div
               className="relative h-auto min-h-[500px] overflow-hidden rounded-xl"
               onMouseEnter={() => setIsAutoSliding(false)}
